@@ -33,7 +33,6 @@ form {
   color: white;
   flex-direction: column;
   z-index: 99;
-  display: none;
 }
 
 #tabelle {
@@ -95,6 +94,15 @@ li {
   justify-content: center;
 }
 
+.li_selected {
+  display: flex;
+  text-align: center;
+  background-color: yellow;
+  color: red;
+  align-items: center;
+  justify-content: center;
+}
+
 #tabellone {
   position: absolute;
   width: 80%;
@@ -105,7 +113,7 @@ li {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: left;
   padding: 20px;
   border-radius: 10px;
