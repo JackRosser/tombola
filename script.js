@@ -1,6 +1,7 @@
 let form = document.querySelector("form");
 let formValue = 0;
 let section = document.querySelector("section");
+
 // Processo di creazione tabelle
 let createUl = function (value) {
   for (let i = 0; i < value; i++) {
@@ -32,19 +33,29 @@ let start = function (e) {
 
 form.addEventListener("submit", start);
 
-console.log(form);
-
 let sacchetto = document.getElementById("sacchetto");
 
+let sacchettoBox = [];
+for (let i = 1; i <= 76; i++) {
+  sacchettoBox.push(i);
+}
+
 sacchetto.addEventListener("click", function () {
-  let randomCells = Math.ceil(Math.random() * 76);
+  let randomIndex = Math.floor(Math.random() * sacchettoBox.length);
+  let randomCells = sacchettoBox[randomIndex];
   let monetina = document.createElement("div");
   monetina.className = "numero_uscito";
-  monetina.innerText = randomCells;
   let tabellone = document.getElementById("tabellone");
+  monetina.innerText = randomCells;
+
+  sacchettoBox.splice(randomIndex, 1);
+
   tabellone.appendChild(monetina);
-  let li = document.querySelector("li");
-  if (li.innerText === monetina.innerText) {
-    li.className = "li_selected";
-  }
+
+  let liElements = document.querySelectorAll("ul li");
+  liElements.forEach(function (li) {
+    if (li.innerText === monetina.innerText) {
+      li.className = "li_selected";
+    }
+  });
 });
