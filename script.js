@@ -57,5 +57,13 @@ sacchetto.addEventListener("click", function () {
     if (li.innerText === monetina.innerText) {
       li.className = "li_selected";
     }
+
+    //death
+    if (sacchettoBox.length === 0) {
+      sacchetto.addEventListener("click", function () {
+        alert("non ci sono più numeri, smettila!");
+        alert.remove();
+      });
+    }
   });
 });

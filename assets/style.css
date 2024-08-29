@@ -99,6 +99,7 @@ li {
   text-align: center;
   background-color: yellow;
   color: red;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
 }
