@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 form {
   position: absolute;
   background-color: red;
-  left: 15%;
+  left: 20%;
   width: 60%;
   height: 50vh;
   border-radius: 20px;
@@ -33,7 +33,7 @@ form {
   color: white;
   flex-direction: column;
   z-index: 99;
-  /* display: none; */
+  display: none;
 }
 
 #tabelle {
