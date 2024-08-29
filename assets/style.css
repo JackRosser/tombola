@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  font-family: "Comic Neue", cursive;
+  background-color: rgb(255, 252, 222);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  background-color: red;
+  margin: auto;
+  width: 60%;
+  height: 50vh;
+  border-radius: 20px;
+  margin-top: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  display: none;
+}
+
+#tabelle {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin-block: 20px;
+  border-radius: 10px;
+  background-color: rgb(226, 226, 178);
+}
+
+#tabelle:focus {
+  outline: none;
+}
+
+button {
+  font-family: "Comic Neue", cursive;
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  transition: padding 1s cubic-bezier(0.215, 0.61, 0.355, 1), font-size 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+button:hover {
+  padding: 20px;
+  font-size: 2rem;
+}
